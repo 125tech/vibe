@@ -1,5 +1,6 @@
 import AIProviderSelector from '@/components/AIProviderSelector';
 import AIChat from '@/components/AIChat';
+import BinaryCalculator from '@/components/BinaryCalculator';
 
 export default function Home() {
   return (
@@ -7,13 +8,19 @@ export default function Home() {
       <main className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-black dark:text-white mb-4">
-            Multi-AI Provider Platform
+            Multi-AI Provider Platform & Tools
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Connect to multiple AI providers and chat with your preferred model
+            Connect to multiple AI providers, chat with your preferred model, and use our binary calculator
           </p>
         </div>
 
+        {/* Binary Calculator - Featured Section */}
+        <div className="mb-8">
+          <BinaryCalculator />
+        </div>
+
+        {/* AI Provider Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <AIProviderSelector />
           <AIChat />
